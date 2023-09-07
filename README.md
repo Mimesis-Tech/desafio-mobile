@@ -9,6 +9,15 @@ Você precisará consumir a [api de filmes tmdb](http://https://developer.themov
 
 Faça um fork desse repositório para poder concluir o desafio.
 
+## Observações
+
+- o botão de play no filme de destaque só aparece quando você passa o mouse em cima
+- quando clica no texto da sinopse, ele abre mostrando o texto completo
+- você pode escolher as categorias baseado nas categorias que a API vai te dar
+- rolagem para o lado e para baixo precisa funcionar
+
+- qualquer dúvida, não hesite em perguntar! 
+
 ## Objetivos
 
 Neste desafio, os maiores pontos avaliados serão: 

@@ -24,6 +24,7 @@ Neste desafio, os maiores pontos avaliados serão:
 - arquitetura organizada e código limpo
 	- mínimo de padrão de projetos
 	- reutilizar código
+	- sabe usar programação orientada a objetos
 
 - commits organizados e padronizados
 	- utilize o padrão convencional de commits:

@@ -10,8 +10,8 @@ import {
 
 import { Text } from "../Text";
 import { TouchableOpacity } from "../TouchableOpacity";
-
 import { convertNumberToPercentage } from "../../utils/convertNumberToPercentage";
+import { TruncatedText } from "../TruncatedText";
 
 import { api } from "../../services/api";
 
@@ -72,10 +72,18 @@ export const PopularMovie = ({ url }: PopularMovieProps) => {
               {popularMovie?.release_date.slice(0, 4)}
             </Text>
           </MovieDetails>
-
-          <Text color="#FDFDFD" size={16} font="I400" textAlign="justify">
+          {/* <Text color="#FDFDFD" size={16} font="I400" textAlign="justify">
             {popularMovie?.overview}
-          </Text>
+          </Text> */}
+
+          <TruncatedText
+            color="#FDFDFD"
+            size={16}
+            font="I400"
+            textAlign="auto"
+            text={popularMovie?.overview ?? "Não há texto"}
+            maxChars={66}
+          />
         </MovieDescription>
       </MovieContent>
     </Container>

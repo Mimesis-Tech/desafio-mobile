@@ -72,9 +72,6 @@ export const PopularMovie = ({ url }: PopularMovieProps) => {
               {popularMovie?.release_date.slice(0, 4)}
             </Text>
           </MovieDetails>
-          {/* <Text color="#FDFDFD" size={16} font="I400" textAlign="justify">
-            {popularMovie?.overview}
-          </Text> */}
 
           <TruncatedText
             color="#FDFDFD"

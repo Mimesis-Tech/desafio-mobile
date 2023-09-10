@@ -2,17 +2,22 @@ import styled from "styled-components/native";
 
 export const Container = styled.View`
   background-color: #2d2a2a;
+  padding-bottom: 32px;
+`;
+
+export const TouchableOpacity = styled.TouchableOpacity`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const PlayImage = styled.Image`
   position: absolute;
-  z-index: 1000;
-  align-self: center;
-  top: 50;
+  z-index: 100;
 `;
 
 export const MovieCover = styled.Image`
-  max-width: 100%;
+  min-width: 100%;
   height: 192px;
 `;
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import {
   Container,
+  TouchableOpacity,
   PlayImage,
   MovieCover,
   MovieContent,
@@ -9,15 +10,10 @@ import {
 } from "./styles";
 
 import { Text } from "../Text";
-import { TouchableOpacity } from "../TouchableOpacity";
 import { convertNumberToPercentage } from "../../utils/convertNumberToPercentage";
 import { TruncatedText } from "../TruncatedText";
 
 import { api } from "../../services/api";
-
-interface PopularMovieProps {
-  url: string;
-}
 
 interface MovieProps {
   id: number;
@@ -25,16 +21,20 @@ interface MovieProps {
   backdrop_path: string;
   overview: string;
   release_date: string;
-  popularity: number;
+  vote_average: number;
 }
 
-export const PopularMovie = ({ url }: PopularMovieProps) => {
+export const PopularMovie = () => {
   const [popularMovie, setPopularMovie] = useState<MovieProps>();
   const [isPressed, setIsPressed] = useState(false);
 
   useEffect(() => {
     api
-      .get(`${url}?language=pt-br`)
+      .get("/movie/popular", {
+        params: {
+          language: "pt-br",
+        },
+      })
       .then((response) => {
         setPopularMovie(response.data.results[0]);
       })
@@ -58,6 +58,7 @@ export const PopularMovie = ({ url }: PopularMovieProps) => {
           }}
         />
       </TouchableOpacity>
+
       <MovieContent>
         <Text color="#FDFDFD" size={24} font="I400">
           {popularMovie?.title}
@@ -66,7 +67,8 @@ export const PopularMovie = ({ url }: PopularMovieProps) => {
         <MovieDescription>
           <MovieDetails>
             <Text color="#44BF57" size={12} font="I400">
-              {convertNumberToPercentage(popularMovie?.popularity)}% gostaram
+              {convertNumberToPercentage(popularMovie?.vote_average as number)}%
+              gostaram
             </Text>
             <Text color="#FDFDFD" size={12} font="I400">
               {popularMovie?.release_date.slice(0, 4)}

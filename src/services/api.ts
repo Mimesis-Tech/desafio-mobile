@@ -1,6 +1,5 @@
 import axios from "axios";
-
-//@ts-ignore
+// @ts-ignore
 import { TMDB_API_KEY } from "@env";
 
 const API_KEY = TMDB_API_KEY;

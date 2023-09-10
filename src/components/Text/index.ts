@@ -6,6 +6,7 @@ interface TextProps {
   size?: number;
   opacity?: number;
   textAlign?: "auto" | "center" | "justify" | "left" | "right";
+  padding?: string;
 }
 
 export const Text = styled.Text<TextProps>`
@@ -14,4 +15,5 @@ export const Text = styled.Text<TextProps>`
   font-size: ${({ size }) => (size ? `${size}px` : "16px")};
   text-align: ${({ textAlign }) => (textAlign ? textAlign : "auto")};
   opacity: ${({ opacity }) => opacity || 1};
+  padding: ${({ padding }) => padding || "0px"};
 `;

@@ -1,5 +1,4 @@
-export const convertNumberToPercentage = (number: number | undefined) => {
-  let newValue = Math.round(number as number);
-  newValue = newValue % 100;
+export const convertNumberToPercentage = (number: number) => {
+  let newValue = number * 10;
   return newValue;
 };

@@ -1,10 +1,13 @@
 import { Container, Content } from "./styles";
-import { Text } from "../../components/Text";
+
+import { Header } from "../../components/Header";
 
 export const Home = ({ navigation }: { navigation: any }) => {
 	return (
 		<Container>
-			<Content></Content>
+			<Content>
+				<Header />
+			</Content>
 		</Container>
 	);
 };

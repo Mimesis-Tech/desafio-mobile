@@ -1,4 +1,6 @@
-export const theme = {
+import { Theme } from "../types/theme";
+
+export const theme: Theme = {
 	colors: {
 		bg: "#2D2A2A",
 		black: "#000",

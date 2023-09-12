@@ -42,7 +42,7 @@ export const MovieDetails = () => {
 
 	return (
 		<Container>
-			<TouchableOpacity onPressIn={handlePressIn}>
+			<TouchableOpacity onPress={handlePressIn}>
 				{isPressed && <PlayImage source={require("../../assets/play.png")} />}
 
 				<MovieCover

@@ -47,7 +47,7 @@ export const MovieDetails = () => {
 
 				<MovieCover
 					source={{
-						uri: `https://image.tmdb.org/t/p/original${movie?.backdrop_path}`,
+						uri: `https://image.tmdb.org/t/p/original${movie?.poster_path}`,
 					}}
 				/>
 			</TouchableOpacity>

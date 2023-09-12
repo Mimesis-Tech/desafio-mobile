@@ -10,11 +10,7 @@ import {
 	TouchableOpacity,
 } from "./styles";
 
-interface MovieProps {
-	id?: number;
-	title?: string;
-	poster_path?: string;
-}
+import { MovieProps } from "../../types/movie";
 
 interface MovieCategory {
 	category: string;

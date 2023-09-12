@@ -4,14 +4,7 @@ import { Container, TouchableOpacity } from "./syles";
 
 import { Text } from "../Text";
 
-interface TruncatedTextProps {
-	text: string;
-	maxChars: number;
-	color: string;
-	size: number;
-	font: string;
-	textAlign: string;
-}
+import { TruncatedTextProps } from "../../types/truncatedText";
 
 export const TruncatedText = ({
 	text,

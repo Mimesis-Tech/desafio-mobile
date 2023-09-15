@@ -11,7 +11,7 @@ Faça um fork desse repositório para poder concluir o desafio.
 
 ## Observações
 
-- o botão de play no filme de destaque só aparece quando você passa o mouse em cima
+- o botão de play no filme de destaque só aparece quando toca na imagem
 - quando clica no texto da sinopse, ele abre mostrando o texto completo
 - você pode escolher as categorias baseado nas categorias que a API vai te dar
 - rolagem para o lado e para baixo precisa funcionar
